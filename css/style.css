@@ -1,59 +1,93 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    color: #333;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYED KHAJA OSMAN HAROON - Resume</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Extra styles for theme button */
+        .theme-btn {
+            margin-top: 15px;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            background: #ffcc00;
+            color: #000;
+            font-size: 14px;
+            font-weight: bold;
+        }
 
-header {
-    text-align: center;
-    padding: 30px 20px;
-    background-color: #1e40af;
-    color: white;
-}
+        body.dark .theme-btn {
+            background: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SYED KHAJA OSMAN HAROON</h1>
+        <h3>IT Admin | Linux Learner | Security Enthusiast</h3>
+        <p>Email: <a href="mailto:faiz.osman8@gmail.com">faiz.osman8@gmail.com</a></p>
+        <p>
+            <a href="https://github.com/faizosman8-spec/">GitHub</a> |
+            <a href="https://www.linkedin.com/in/sd-khaja-osman-haroon-5203559a">LinkedIn</a>
+        </p>
+        <!-- Theme Toggle Button -->
+        <button class="theme-btn" onclick="toggleTheme()">🌙 Toggle Theme</button>
+    </header>
 
-header h1 {
-    margin: 0;
-}
+    <main>
+        <section>
+            <h2>Skills</h2>
+            <ul>
+                <li>Linux</li>
+                <li>Windows Server</li>
+                <li>Networking</li>
+                <li>Docker</li>
+                <li>Active Directory</li>
+                <li>Server Optimization & Virtualization</li>
+                <li>Backup Solutions & Network Security</li>
+            </ul>
+        </section>
 
-header h3 {
-    margin: 10px 0 5px;
-}
+        <section>
+            <h2>Experience / Projects</h2>
+            <p>Dedicated System Administrator with 8+ years of experience in Windows and Linux environments, specializing in network management, server optimization, and virtualization. Proven expertise in Active Directory, backup solutions, and network security with a track record of enhancing system performance and reliability. Skilled in troubleshooting, automation, and user support, with a focus on proactive system stability and high availability.</p>
+        </section>
 
-header a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-}
+        <section>
+            <h2>Education</h2>
+            <ul>
+                <li>B.Tech (Electronics & Communication Engineering): 2010-2014</li>
+                <li>Board of Intermediate (MPC): 2008-2010</li>
+                <li>Board of Secondary High School: 2007-2008</li>
+            </ul>
+        </section>
+    </main>
 
-main {
-    max-width: 900px;
-    margin: 30px auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-}
+    <footer>
+        <p>© 2025 SYED KHAJA OSMAN HAROON | <a href="https://github.com/faizosman8-spec/">GitHub</a></p>
+    </footer>
 
-section {
-    margin-bottom: 25px;
-}
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle("dark");
+            // Save preference
+            if (document.body.classList.contains("dark")) {
+                localStorage.setItem("theme", "dark");
+            } else {
+                localStorage.setItem("theme", "light");
+            }
+        }
 
-section h2 {
-    color: #1e40af;
-    border-bottom: 2px solid #1e40af;
-    padding-bottom: 5px;
-}
-
-ul {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-
-footer {
-    text-align: center;
-    padding: 15px;
-    background-color: #1e40af;
-    color: #fff;
-    margin-top: 20px;
-}
+        // Load preference
+        window.onload = () => {
+            if (localStorage.getItem("theme") === "dark") {
+                document.body.classList.add("dark");
+            }
+        };
+    </script>
+</body>
+</html>
